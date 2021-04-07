@@ -1,8 +1,11 @@
 import App from "../components/App";
 import { base } from "../lib/airtable";
-const IndexPage = () => (
+const IndexPage = ({ ids }) => (
   <App>
     <h1 className="text-green-500">WELCOME TO SASSY WORLD</h1>
+    {ids.map((id) => (
+      <p className="text-black">{id}</p>
+    ))}
   </App>
 );
 
