@@ -17,7 +17,7 @@ export async function getStaticProps() {
       function page(records, fetchNextPage) {
         // This function (`page`) will get called for each page of records.
 
-        records.forEach(function (record) {
+        records.map((record) => {
           console.log("Retrieved", record.get("ID"));
         });
 
